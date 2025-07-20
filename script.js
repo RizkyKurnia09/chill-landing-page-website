@@ -1,8 +1,10 @@
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
+// Swipper JS
+
+var swiper = new Swiper(".popular-content", {
+  slidesPerView: 1,
+  spaceBetween: 10,
   autoplay: {
-    delay: 2500,
+    delay: 5500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -13,16 +15,26 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-const loginForm = document.querySelector(".login-part");
-const registerLink = document.querySelector(".register-link");
-const loginLink = document.querySelector(".login-link");
-
-loginLink.addEventListener("click", () => {
-  loginForm.classList.add("active");
-});
-
-registerLink.addEventListener("click", () => {
-  loginForm.classList.remove("active");
+  breakpoints: {
+    280: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    510: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    758: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
 });
